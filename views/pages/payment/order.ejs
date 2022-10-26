@@ -1,45 +1,163 @@
-<div class="d-flex justify-content-center">
+<link rel="stylesheet" href="/css/main.css">
+<script src="/public/js/main.js"></script>
 
-	<!-- form design to be changed -->
-	<form method="POST" action="/payment/order">
-		<div class="mb-3">
-		  <label for="amountInput" class="form-label">Enter Amount</label>
-		  <input name="amount" type="number" min="1" class="form-control form-control-lg" id="amountInput" aria-describedby="amountHelp" required>
-
-		  <!-- name -->
-		  <label for="amountInput" class="form-label">Enter Name</label>
-		  <input name="name" type="text" class="form-control form-control-lg" id="name" aria-describedby="amountHelp" required>
-
-		  <!-- email -->
-		  <label for="amountInput" class="form-label">Enter Email</label>
-		  <input name="email" type="email" class="form-control form-control-lg" id="email" aria-describedby="amountHelp" required>
-		
-		  <!-- phone-number -->
-		  <label for="amountInput" class="form-label">Enter Email</label>
-		  <input name="email" type="email" class="form-control form-control-lg" id="email" aria-describedby="amountHelp" required>
-
-		  <!-- college -->
-		  <label for="amountInput" class="form-label">Enter Email</label>
-		  <input name="email" type="email" class="form-control form-control-lg" id="email" aria-describedby="amountHelp" required>
-
-		<!-- year of passing -->
-		  <label for="amountInput" class="form-label">Enter Email</label>
-		  <input name="email" type="email" class="form-control form-control-lg" id="email" aria-describedby="amountHelp" required>
+<!-- <div class="d-flex justify-content-center"> -->
 
 
-		  <!-- address -->
-		  <label for="amountInput" class="form-label">Enter Email</label>
-		  <input name="email" type="email" class="form-control form-control-lg" id="email" aria-describedby="amountHelp" required>
+    <main>
+      <div class="box">
+        <div class="inner-box">
+          <div class="forms-wrap">
+            
+            <form method="POST" action="/payment/order" autocomplete="off" class="sign-in-form">
+              <div class="logo">
+                <img src="/images/logo.png" alt="easyclass" />
+              </div>
 
-			<!-- ieee-id -->
-		  <label for="amountInput" class="form-label">Enter Email</label>
-		  <input name="email" type="email" class="form-control form-control-lg" id="email" aria-describedby="amountHelp" required>
+              <div class="heading">
+                <h2>Registration Form</h2>
+                <h6>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, ex ratione. Aliquid!</h6>
+                
+              </div>
 
-		  <div id="amountHelp" class="form-text">Bhaiyon aur Beheno, ek rupaiya, sau rupaiya. Kuch bhi chalega.</div>
-		</div>
+              <div class="actual-form">
+                <div class="input-wrap">
+                  <input
+                    type="text"
+					name="name"
+                    id="name"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+					aria-describedby="amountHelp"
+                    required
+                  />
+                  <label>Name</label>
+                </div>
+                <div class="input-wrap">
+                  <input
+                    type="email"
+					name="email"
+                    id="email"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+					aria-describedby="amountHelp"
+                    required
+                  />
+                  <label>E-Mail</label>
+                </div>
+                <div class="input-wrap">
+                  <input
+                    type="text"
+                    id="phone"
+					name="number"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+					aria-describedby="amountHelp"
+                    required
+                  />
+                  <label>Phone Number</label>
+                </div>
+                <div class="input-wrap">
+                  <input
+                    type="text"
+					name="college"
+                    id="college"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+					aria-describedby="amountHelp"
+                    required
+                  />
+                  <label>College</label>
+                </div>
+                <div class="input-wrap">
+                  <input
+                    type="number"
+                    id="year"
+					name="year"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+					aria-describedby="amountHelp"
+                    required
+                  />
+                  <label>Year of Passing</label>
+                </div>
+                <!-- <div class="input-wrap">
+                  <input
+                    type="text"
+                    id="address"
+					name="address"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+					aria-describedby="amountHelp"
+                    required
+                  />
+                  <label>Residential Address</label>
+                </div> -->
+                <div class="input-wrap">
+                  <input
+                    type="text"
+                    id="ieee"
+					name="ieeeid"
+                    minlength="4"
+                    class="input-field"
+					aria-describedby="amountHelp"
+                    autocomplete="off"
+                  />
+                  <label>IEEE ID</label>
+                </div>
+				<div class="input-wrap">
+					<input
+					  type="number"
+					  id="ieee"
+					  name="amount"
+					  
+					  class="input-field"
+					  aria-describedby="amountHelp"
+					  autocomplete="on"
+					/>
+					<label>AMOUNT</label>
+				  </div>
+                
+                </div>
+                <input type="submit" value="Sign In" class="sign-btn" id="getOrderIdBtn" ></input>
+              </div>
+            </form>
 
-		<div class="d-grid">
-			<button type="submit" class="btn btn-primary" id="getOrderIdBtn">Submit</button>
-		</div>
-	</form>
-</div>
+            
+          </div>
+
+          <div class="carousel">
+            <div class="images-wrapper">
+              <img src="/images/image.gif" class="image img-1 show" alt="" />
+              <img src="./images/image1.png" class="image img-2" alt="" />
+              <img src="./images/image2.png" class="image img-3" alt="" />
+            </div>
+
+            <div class="text-slider">
+              <div class="text-wrap">
+                <div class="text-group" style="color:white;">
+                  <h2>AICSSYC | 2022</h2>
+                  <h2>The Biggest Eastern India Networking Event</h2>
+                  <h2>Where Tech is without Limits.</h2>
+                </div>
+              </div>
+
+              <div class="bullets">
+                <span class="active" data-value="1"></span>
+                <span data-value="2"></span>
+                <span data-value="3"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Javascript file -->
+<script src="/js/main.js"></script>

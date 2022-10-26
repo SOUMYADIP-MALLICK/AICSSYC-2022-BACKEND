@@ -37,6 +37,11 @@ router.post('/order', function(req, res, next) {
 	}
 	const custname=req.body.name;
 	const custemail=req.body.email;
+	const custphone=req.body.number;
+	const custcollege=req.body.college;
+	const custyr=req.body.year;
+	const custieee=req.body.ieeeid;
+
 	razorPayInstance.orders.create(params)
 	.then(async (response) => {
 		const razorpayKeyId = process.env.RAZORPAY_KEY_ID
@@ -55,6 +60,10 @@ router.post('/order', function(req, res, next) {
 			// Render Order Confirmation page if saved succesfully
 			paymentDetail.name=custname;
 			paymentDetail.email=custemail;
+			paymentDetail.number=custphone;
+			paymentDetail.college=custcollege;
+			paymentDetail.year=custyr;
+			paymentDetail.ieeeid=custieee;
 			await paymentDetail.save()
 			res.render('pages/payment/checkout', {
 				title: "Confirm Order",

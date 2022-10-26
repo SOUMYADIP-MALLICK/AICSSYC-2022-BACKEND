@@ -11,6 +11,18 @@ const paymentDetailsSchema = new mongoose.Schema({
 	email:{
 		type:String
 	},
+	number:{
+		type:String
+	},
+	college:{
+		type:String
+	},
+	year:{
+		type:String
+	},
+	ieeeid:{
+		type:String
+	},
 	receiptId: {
 		type: String
 	},
