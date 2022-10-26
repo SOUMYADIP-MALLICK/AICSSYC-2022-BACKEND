@@ -13,7 +13,7 @@ const paymentWebRoutes = require('./routes/web/payments');
 // Create an instance of express app
 const app = express()
 // Set port
-const port = process.env.PORT || '3000'
+const port = process.env.port || '3000'
 
 // Configure folders containing static files
 app.use(express.static('public'));
