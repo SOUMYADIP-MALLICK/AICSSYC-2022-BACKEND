@@ -31,7 +31,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 // Connect to MongoDB
-mongoose.connect(mongodb+srv://soumyadip:FlowerF9@cluster0.kdg0xrt.mongodb.net/?retryWrites=true&w=majority, 
+mongoose.connect(process.env.mongodb+srv://soumyadip:FlowerF9@cluster0.kdg0xrt.mongodb.net/?retryWrites=true&w=majority, 
 		 { useNewUrlParser: true, useUnifiedTopology: true })
 const db = mongoose.connection
 db.on('error', (error) => console.error(error))
@@ -60,6 +60,6 @@ app.use(function(err, req, res, next) {
 });
 
 // Listen app on given port
-app.listen(PORT, () => {
-	console.log(`servidor iniciado em http://localhost`+PORT)
+app.listen(PORT , () => {
+	console.info(`[STATUS] App listening on port ${PORT }`)
 })
