@@ -31,7 +31,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 // Connect to MongoDB
-mongoose.connect(mongodb+srv://soumyadip:<password>@cluster0.kdg0xrt.mongodb.net/?retryWrites=true&w=majority, 
+mongoose.connect(mongodb+srv://soumyadip:FlowerF9@cluster0.kdg0xrt.mongodb.net/?retryWrites=true&w=majority, 
 		 { useNewUrlParser: true, useUnifiedTopology: true })
 const db = mongoose.connection
 db.on('error', (error) => console.error(error))
