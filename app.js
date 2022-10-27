@@ -13,7 +13,7 @@ const paymentWebRoutes = require('./routes/web/payments');
 // Create an instance of express app
 const app = express()
 // Set port
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || '3000'
 
 // Configure folders containing static files
 app.use(express.static('public'));
@@ -31,8 +31,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 // Connect to MongoDB
-mongoose.connect(process.env.mongodb+srv://soumyadip:FlowerF9@cluster0.kdg0xrt.mongodb.net/?retryWrites=true&w=majority, 
-		 { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
 const db = mongoose.connection
 db.on('error', (error) => console.error(error))
 db.once('open', () => console.log('[STATUS] Connected to Database'))
@@ -60,6 +59,6 @@ app.use(function(err, req, res, next) {
 });
 
 // Listen app on given port
-app.listen(PORT , () => {
-	console.info(`[STATUS] App listening on port ${PORT }`)
+app.listen(port, () => {
+	console.info(`[STATUS] App listening on port ${port}`)
 })
