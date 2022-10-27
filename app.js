@@ -31,7 +31,8 @@ app.use(bodyParser.urlencoded({
 }));
 
 // Connect to MongoDB
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(mongodb+srv://soumyadip:<password>@cluster0.kdg0xrt.mongodb.net/?retryWrites=true&w=majority, 
+		 { useNewUrlParser: true, useUnifiedTopology: true })
 const db = mongoose.connection
 db.on('error', (error) => console.error(error))
 db.once('open', () => console.log('[STATUS] Connected to Database'))
